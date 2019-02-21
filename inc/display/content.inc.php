@@ -1,5 +1,17 @@
 <?php // Filename: connect.inc.php
+//mysqli_connect.inc.php is a file used to connect
+//to the database, that is it's only purpose.
 
+//functions.inc.php has four functions needed to run app:
+//display_message - displays alert message
+//display_letter_filters - displays letters in alphabet for 
+//purpose of clicking on for students with last name 
+//starting with that letter
+//display_record_table - function retrieves records from student table
+// row by row using a mysql function fetch_assoc and places info 
+//into an html table
+//display_error_bucket - function collects input errors into a 'bucket'
+//and displays the errors line by line
 require __DIR__ . "/../db/mysqli_connect.inc.php";
 require __DIR__ . "/../functions/functions.inc.php";
 

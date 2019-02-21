@@ -8,6 +8,12 @@ $error_bucket = [];
 
 // http://php.net/manual/en/mysqli.real-escape-string.php
 
+
+//code below checks to see if fields posted data,
+//if yes, then the data is collected, otherwise an error message
+//is collected into a 'bucket'. if all the data is collected, 
+//then the data is inserted into the database, if not then a list of 
+//errors are displayed
 if($_SERVER['REQUEST_METHOD']=="POST"){
     // First insure that all required fields are filled in
     if (empty($_POST['first'])) {

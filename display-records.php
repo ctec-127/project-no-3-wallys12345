@@ -2,6 +2,9 @@
 
 $pageTitle = "Record Management";
 require 'inc/layout/header.inc.php'; 
+
+//see content.inc.php below for functionality 
+//in diplaying records
 ?>
 <div class="container-fluid">
     <div class="row">

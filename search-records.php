@@ -13,6 +13,7 @@ require 'inc/app/config.inc.php';
         <?php 
             if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 if(!empty($_POST['search'])){
+                    //'search' in post comes from form in the navbar.inc.php
                     $sql = "SELECT * FROM $db_table WHERE " . '"' . $_POST["search"] . '"' . " IN (student_id, first_name, last_name, email, phone) ORDER BY last_name ASC";
                     // $sql = "SELECT * FROM student WHERE student_id LIKE '%val%' or field2 LIKE '%val%'
                     $result = $db->query($sql);
@@ -24,6 +25,7 @@ require 'inc/app/config.inc.php';
                         // echo "<h2 class=\"mt-4\">There are currently no records to display for <strong>last names</strong> starting with <strong>$filter</strong></h2>";
                     } else {
                         echo "<h2 class=\"mt-4 text-center\">$result->num_rows record(s) found for \"" . $_POST['search'] . '"</h2>';
+                        //once a record or records are found the function below is called to display records
                         display_record_table($result);
                     }
                 } else {

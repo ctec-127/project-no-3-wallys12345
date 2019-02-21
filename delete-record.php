@@ -4,6 +4,8 @@ require __DIR__ . "/inc/db/mysqli_connect.inc.php";
 require __DIR__ . "/inc/app/config.inc.php";
 
 // check to see if id is in the query string
+//if so find id in database and delete the record associated 
+//with it. 
 if(isset($_GET['id'])){
     // build SQL for delete
     $sql = "DELETE FROM $db_table WHERE id={$_GET['id']} LIMIT 1";
