@@ -18,8 +18,8 @@ require __DIR__ . "/../functions/functions.inc.php";
 $orderby = 'last_name';
 $filter = '';
 
-if (isset($_GET['filter'])) {
-    $filter = $_GET['filter'];
+if (isset($_GET['fish'])) {
+    $filter = $_GET['fish'];
 }
 
 if (isset($_GET['sortby'])) {

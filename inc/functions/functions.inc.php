@@ -21,7 +21,7 @@ function display_letter_filters($filter){
         } else {
             $class = 'class="text-secondary p-1 mr-3 bg-light border rounded"';
         }
-        echo "<u><a $class href='?filter=$letters[$i]' title='$letters[$i]'>$letters[$i]</a></u>";
+        echo "<u><a $class href='?fish=$letters[$i]' title='$letters[$i]'>$letters[$i]</a></u>";
     }
     echo '<a class="text-secondary p-2 mr-2 bg-success text-light border rounded" href="?clearfilter" title="Reset Filter">Reset</a>&nbsp;&nbsp;';
 }
