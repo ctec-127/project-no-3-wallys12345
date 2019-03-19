@@ -22,6 +22,10 @@ http://php.net/manual/en/language.operators.comparison.php#language.operators.co
     <input class="form-control" type="text" id="phone" name="phone" value="<?php echo (isset($phone) ? $phone: '');?>"">
     <br>
     <br>
+    <label class="col-form-label" for="gradDate">Graduation Date </label>
+    <input class="form-control" type="date" id="gradDate" name="gradDate" value="<?php echo (isset($gradDate) ? $gradDate: '');?>"">
+    <br>
+    <br>
     <label class="col-form-label" for="gpa">Gpa </label>
     <input class="form-control" type="text" id="gpa" name="gpa" value="<?php echo (isset($gpa) ? $gpa: '');?>"">
     <br>
@@ -29,7 +33,7 @@ http://php.net/manual/en/language.operators.comparison.php#language.operators.co
     <input type="radio" name="aid"  <?php if (isset($aid) && $aid == '1') echo "checked";?>  >Yes
     <input type="radio" name="aid" <?php if (isset($aid) && $aid == '0') echo "checked";?> >No
     <br>
-    <label class="col-form-label" for="degree">Degree </label>
+    <label class="col-form-label" for="degree">Decheese </label>
     <select name="degree" id="degree">
     <option value="--Select--" selected>--Select--</option>
     <option value="bachelor of arts">Bachelor of Arts</option>`
@@ -37,7 +41,6 @@ http://php.net/manual/en/language.operators.comparison.php#language.operators.co
     <option value="associates">Associates</option>
     <option value="none">None</option>
   </select>
-    <br>
     <br>
     <a href="display-records.php">Cancel</a>&nbsp;&nbsp;
     <button class="btn btn-primary" type="submit">Save Record</button>

@@ -11,6 +11,8 @@
     <title><?php echo $pageTitle; ?></title>
 </head>
 <body>
-
+<?php
+ //require 'inc/functions/functions.inc.php';
+ ?>
 <?php require 'inc/app/config.inc.php';?> 
 <?php require 'inc/layout/navbar.inc.php';?> 

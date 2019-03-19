@@ -38,11 +38,17 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     } else {
         $phone = $db->real_escape_string(strip_tags($_POST['phone']));
     }
+    if (empty($_POST['gradDate'])) {
+        array_push($error_bucket,"<p>A graduation date is required.</p>");
+    } else {
+        #$gradDate = $_POST['gradDate'];
+        $gradDate = $db->real_escape_string($_POST['gradDate']);
+    }
 
     // If we have no errors than we can try and insert the data
     if (count($error_bucket) == 0) {
         // Time for some SQL
-        $sql = "UPDATE $db_table SET first_name='$first', last_name='$last', student_id=$sid, email='$email',phone='$phone' WHERE id=$id";
+        $sql = "UPDATE $db_table SET first_name='$first', last_name='$last', student_id=$sid, email='$email',phone='$phone',grad_date='$gradDate' WHERE id=$id";
 
         $result = $db->query($sql);
         if (!$result) {
@@ -58,6 +64,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             unset($sid);
             unset($email);
             unset($phone);
+            unset($gradDate);
             unset($id);
         }
     } else {

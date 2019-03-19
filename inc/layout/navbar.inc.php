@@ -29,5 +29,8 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <form action="search-advanced-records.php" method="POST" class="form-inline my-2 my-lg-0">
+      <button onclick="search-advanced_records.php" class="btn btn-outline-success my-2 my-sm-0" type="submit">Advanced Search</button>
+    </form>
   </div>
 </nav>

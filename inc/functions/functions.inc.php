@@ -36,6 +36,7 @@ function display_record_table($result){
     <th><a href="?sortby=last_name">Last Name</a></th>
     <th><a href="?sortby=email">Email</a></th>
     <th><a href="?sortby=phone">Phone</a></th>
+    <th><a href="?sortby=grad_date">Graduation Date</a></th>
     <th><a href="?sortby=degree_program">Degree</a></th>
     <th><a href="?sortby=gpa">Gpa</a></th>
     <th><a href="?sortby=financial_aid">Aid</a></th>
@@ -50,6 +51,7 @@ function display_record_table($result){
         echo "<td><strong>{$row['last_name']}</strong></td>";
         echo "<td>{$row['email']}</td>";
         echo "<td>{$row['phone']}</td>";
+        echo "<td>{$row['grad_date']}</td>";
         echo "<td>{$row['degree_program']}</td>";
         echo "<td>{$row['gpa']}</td>";
         echo "<td>{$row['financial_aid']}</td>";
